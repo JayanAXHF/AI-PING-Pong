@@ -26,7 +26,11 @@
     <center>
       <h1 class="py-2">
         AI Ping Pong
-        <button class="btn btn-outline-dark instuctions btn-sm mx-4">
+        <button
+          class="btn btn-outline-dark instuctions btn-sm mx-4"
+          data-bs-toggle="modal"
+          data-bs-target="#Modal"
+        >
           Instructions
         </button>
       </h1>
@@ -37,6 +41,58 @@
       <button class="btn btn-outline-warning btn-lg my-2" id="status"></button>
       <br /><br />
       <div id="canvas"></div>
+      <footer>
+        <h4>
+          <a href="https://github.com/JayanAXHF/mario-with-nose-movement"
+            >Source code</a
+          >
+          || Original credit to Mario
+        </h4>
+      </footer>
+
+      <!-- modal Section -->
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="Modal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Instructions</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Architecto ad consequuntur accusamus, cupiditate voluptate at
+              deleniti quasi officiis exercitationem? Odit nesciunt suscipit
+              numquam aspernatur blanditiis maxime inventore! Reiciendis magnam
+              fugiat mollitia eveniet.
+              <strong
+                >I dont know what to put in there so lorem ipsum is here</strong
+              >
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </center>
     <script src="main.js"></script>
   </body>
