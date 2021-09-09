@@ -1,4 +1,7 @@
 /*created by prashant shukla */
+let rightWristX;
+let rightWristY;
+let rightWristScore;
 
 var paddle2 = 10,
   paddle1 = 10;
@@ -41,7 +44,15 @@ const modelLoaded = () => {
   console.log("starting the modelll");
 };
 
-const Poses = () => {};
+const Poses = (results) => {
+  if (results.length > 0) {
+    rightWristX = results[0].pose.rightWrist.x;
+
+    rightWristY = results[0].pose.leftWrist.x;
+
+    rightWristScore = results[0].pose.keypoints[10].score;
+  }
+};
 
 function draw() {
   background(0);
@@ -81,6 +92,12 @@ function draw() {
 
   //function move call which in very important
   move();
+
+  if (rightWristScore > 0.2) {
+    fill("#1ec6cc");
+    stroke("#1ec6cc");
+    circle(rightWristX, rightWristY, 20);
+  }
 }
 
 //function reset when ball does notcame in the contact of padde
